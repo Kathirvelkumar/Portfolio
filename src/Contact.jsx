@@ -1,7 +1,7 @@
 import "./CSS/Contact.css";
 import { useState } from "react";
 import Gmail from "./assets/Email.png";
-import LinkedIn from "./assets/linkedIn.png";
+import LinkedIn from "./assets/LinkedIn.png";
 import GitHub from "./assets/Github.png";
 import Location from "./assets/Location.png";
 import UpArraow from "./assets/upArrow.png";
