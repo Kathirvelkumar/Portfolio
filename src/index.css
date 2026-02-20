@@ -1,0 +1,11 @@
+.dark-theme {
+  --mode: dark;
+}
+
+.light-theme {
+  --mode: light;
+}
+
+body {
+  margin: 0;
+}

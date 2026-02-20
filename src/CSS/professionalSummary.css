@@ -1,0 +1,128 @@
+/* .Summary-sec {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+  color: white;
+   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;  
+  margin: 100px auto;  
+} */
+
+.Summary-sec {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+}
+
+
+.Summary-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;               
+  padding: 0 70px;
+  transition: transform 0.4s ease;
+} 
+
+.Summary-div p:hover {
+  transform: scale(1.04);
+}
+
+.Summary-sec h4 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-left: 70px ;
+  margin-bottom: 24px;     /* ✅ removed left margin */
+  background: linear-gradient(to bottom, #ffffff, hsl(271, 100%, 43%) 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Summary-div p {
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0.4px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(69, 68, 68, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ===== IMAGE WRAPPER ===== */
+.Profile-img {
+  min-width: 100px;
+  max-width: 330px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #6d3ddd, #ac2569);
+  box-shadow:
+    0 0 25px rgb(56, 29, 118),
+    0 0 45px rgb(105, 23, 64);
+  transition: transform 0.3s ease;
+} 
+
+.Profile-img:hover {
+  transform: scale(1.04);
+}
+
+
+.light-theme .Summary-sec {
+  background-color: beige;
+  color: black;
+}
+
+.light-theme .Summary-sec h4{
+  background: linear-gradient(to bottom,#ffedc4, #ffc232 55%, #ff8a37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light-theme .Summary-div p{
+  color: black;
+  box-shadow: 0 10px 30px rgb(205, 205, 180);
+}
+
+.light-theme .Profile-img {
+  background: linear-gradient(135deg, #ff994f, #ffd063);
+  box-shadow:
+    0 0 25px rgb(200, 170, 100),
+    0 0 45px rgb(255, 171, 86);
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .Summary-div {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+    padding: 0px 30px;
+
+  }
+
+  .Summary-sec h4{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: 20px;
+  }
+
+  .Profile-img{
+    max-width: 150px;
+  }
+
+  .Summary-div p {
+    text-align: left;
+    padding: 20px;
+    margin: 0px 0px;
+  }
+}

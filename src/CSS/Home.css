@@ -1,0 +1,268 @@
+.Home-sec {
+  background-color: black;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.NavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(4px, 1vh, 10px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.NavBar h3 {
+  font-size: clamp(16px, 2.2vw, 22px);
+  color: white;
+  font-weight: bold;
+  margin-left: clamp(12px, 5vw, 60px);
+  background: linear-gradient(135deg, #8b5cf6, #aa2567);
+  border-radius: 10px;
+  padding: clamp(4px, 0.6vw, 6px) clamp(12px, 2vw, 28px);
+  transition: transform 0.3s ease;
+}
+
+.NavBar h3:hover {
+  transform: translateY(-2px);
+}
+
+.NavBar-Items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 22px);
+  margin-right: clamp(10px, 5vw, 70px);
+}
+
+/* THEME ICONS */
+.Theme-img {
+  width: clamp(22px, 2.5vw, 28px);
+  height: clamp(22px, 2.5vw, 28px);
+  cursor: pointer;
+  padding: 5px clamp(6px, 1.5vw, 15px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.Theme-img:hover {
+  background-color: white;
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* MENU BUTTON */
+.Menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0 clamp(10px, 2vw, 25px);
+  height: clamp(30px, 4vh, 36px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.Menu:hover {
+  background: linear-gradient(135deg, #3e2181, #8a1650);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.Menu img {
+  width: clamp(20px, 2.5vw, 26px);
+  height: clamp(20px, 2.5vw, 26px);
+}
+
+.Menu legend {
+  font-size: clamp(13px, 1.8vw, 17px);
+  font-weight: bold;
+}
+
+/* MENU LIST */
+.MenuList {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 18px 0;
+  border-radius: 10px;
+  width: clamp(140px, 22vw, 180px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transform: translateY(-12px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.35s ease;
+  z-index: 20;
+}
+
+.MenuList li {
+  margin: 6px 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8b1a52, #4a2a93);
+  transition: all 0.3s ease;
+}
+
+.MenuList li:hover {
+  background: linear-gradient(135deg, #4a2a93, #8b1a52);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.MenuList.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  z-index: 999;
+  background-color: #d5d5d556;
+}
+
+.Menu-Wrapper {
+  position: relative;
+}
+
+/* HERO SECTION */
+.Home-Content {
+  flex: 1;                 /* takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  padding: 0 clamp(16px, 6vw, 100px);
+  position: relative;
+}
+
+.Home-Content strong {
+  display: block;
+  font-size: clamp(42px, 16vw, 160px);
+  font-weight: 800;
+  letter-spacing: 4px;
+  word-break: break-word;
+  line-height: 1;
+}
+
+.Home-Content strong span {
+  background: linear-gradient(to bottom, #ffffff, #61229c 55%, #2b1462);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Home-Content legend {
+  font-size: clamp(22px, 4vw, 32px);
+  opacity: 0.9;
+  position: relative;
+  color: #61229c;
+}
+
+/* Decorative text positions made fluid */
+.Home-Content legend:first-child {
+  position: absolute;
+  top: 30%;
+  left: 2.5%;
+  transform: translateY(-50%) scaleY(1.5);
+  font-family: "Ms Madi", cursive;
+  text-shadow: 0 0 8px rgb(117, 66, 238);
+  font-size: clamp(42px, 9vw, 100px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* BOTTOM decorative text */
+.Home-Content legend:last-child {
+  position: absolute;
+  bottom: 30%;
+  right: 3%;
+  transform: translateY(50%) scaleY(1.5);
+  font-family: "Ms Madi", cursive;
+  text-shadow: 0 0 8px rgb(117, 66, 238);
+  font-size: clamp(42px, 9vw, 100px);
+  z-index: 10;
+  pointer-events: none;
+}
+/* LIGHT THEME (unchanged colors) */
+.light-theme .Home-sec {
+  background-color: beige;
+  color: black;
+}
+
+.light-theme .NavBar {
+  box-shadow: 0 2px 20px rgba(115, 115, 115, 0.2);
+}
+
+.light-theme .NavBar h3 {
+  color: black;
+  background: linear-gradient(135deg, #ff8a37, #ffc232);
+}
+
+.light-theme .Theme-img{
+  border: 1px solid rgb(143, 143, 55);
+}
+
+.light-theme .Theme-img:hover {
+  background-color: rgb(46, 46, 46);
+  border: 1px solid beige;
+}
+
+.light-theme .Menu{  
+  border: 1px solid rgb(143, 143, 55);
+}
+
+.light-theme .Menu:hover {
+  background: linear-gradient(135deg, #ff8a37, #ffc232);
+  border: 1px solid beige;
+}
+
+.light-theme .MenuList li {
+  background: linear-gradient(135deg, #ffc232, #ff8a37);
+}
+
+.light-theme .MenuList li:hover {
+  background: linear-gradient(135deg, #ff8a37, #ffc232);
+}
+
+.light-theme .Home-Content strong span {
+  background: linear-gradient(to bottom,#ffedc4, #ffc232 55%, #ff8a37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light-theme .Nav-img{
+  filter: invert(1);
+}
+
+.light-theme .Home-Content legend:first-child,
+.light-theme .Home-Content legend:last-child {
+  color:#ff6a00 ;
+  text-shadow: 0 0 8px #ffc232;
+}
+
+
+/* Hide navbar words only on small phones */
+@media (max-width: 480px) {
+  .Menu legend {
+    display: none;
+  }
+
+  .Menu {
+    padding: 0 14px;   /* keeps button balanced when text disappears */
+    gap: 0;
+  }
+}

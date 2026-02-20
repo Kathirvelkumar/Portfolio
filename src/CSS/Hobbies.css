@@ -1,0 +1,125 @@
+.Hobbies-sec {
+  /* margin: 150px auto; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: black;
+  color: white;
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Hobbies-sec h4 {
+  font-size: 45px;
+  margin-left: 70px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffffff, hsl(271, 100%, 43%) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Hobbies-div {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.Hobby-card {
+  width: 300px;
+  padding: 25px 22px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.Hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5),
+    0 0 20px rgba(236, 72, 153, 0.35);
+}
+
+.Hobby-card h5 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Hobby-card span {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+.light-theme .Hobbies-sec {
+  background-color: beige;
+  color: black;
+}
+.light-theme .Hobby-card h5 {
+  background: linear-gradient(90deg, #ff8a37, #ffc232);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .Hobby-card {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 25px rgba(200, 200, 200, 0.7);
+}
+.light-theme .Hobby-card:hover {
+  box-shadow: 0 12px 30px rgba(255, 206, 84, 0.5),
+    0 0 20px rgba(255, 216, 117, 0.765);
+}
+
+
+
+.light-theme .Hobby-card span {
+  color: black;
+}
+.light-theme .Hobbies-sec h4 {
+  background: linear-gradient(to bottom, #ffedc4, #ffc232 55%, #ff8a37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 420px) {
+
+  .Hobbies-sec {
+    padding: 40px 0px;
+    min-height: auto;
+  }
+
+  .Hobbies-sec h4 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .Hobbies-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .Hobby-card {
+    width: 100%;
+    max-width: 250px;
+    padding: 20px 16px;
+  }
+
+  .Hobby-card h5 {
+    font-size: 19px;
+  }
+
+  .Hobby-card span {
+    font-size: 15px;
+  }
+
+}
